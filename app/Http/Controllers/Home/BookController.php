@@ -17,4 +17,9 @@ class BookController extends Controller
     {
         return view("home/author");
     }
+    //个人信息
+    public function mine()
+    {
+        return view("home/mine");
+    }
 }

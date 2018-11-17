@@ -19,4 +19,5 @@ Route::get('/', function () {
 Route::prefix("/")->namespace("Home")->group(function () {
     Route::get("index", "BookController@index");
     Route::get("author", "BookController@author");
+    Route::get("mine", "BookController@mine");
 });

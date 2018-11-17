@@ -7,8 +7,6 @@
     <title>Reading</title>
     <script src="/home/js/responsive.js"></script>
     <link rel="stylesheet" href="/home/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/home/css/reset.css">
     <link rel="stylesheet" href="/home/css/index.css">
 </head>
@@ -21,6 +19,7 @@
             <div class="col-xs-4 search"><span class="glyphicon glyphicon-search"></span></div>
         </div>
     </header>
+    <div class="header"></div>
     <!-- 头部结束 -->
 
     <!-- 附近热门开始 -->
