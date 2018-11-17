@@ -1,0 +1,308 @@
+/* 头部开始 */
+header {
+    height: 0.8rem;
+    background-color: #fef8f2;
+    border-bottom: 0.02rem solid #d4c0aa;
+    box-shadow: 0 1rem 1.5rem 0 rgb(254,248,242);
+    font-size: 0.3rem;
+    color: #d4c0aa;
+    line-height: 0.8rem;
+    z-index: 10;
+}
+
+header .addr {
+    text-align: left;
+}
+
+header .search {
+    text-align: right;
+}
+
+header .title {
+    font-size: 0.36rem;
+    text-align: center;
+}
+/* 头部结束 */
+
+/* 附近热门开始 */
+.nearby {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 0.20rem 0.20rem;
+    background-color: #fff;
+    border-radius: 0 0 0.10rem 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+}
+
+.nearby .headline {
+    width: 100%;
+}
+
+.nearby .headline .nb_hot {
+    font-size: 0.32rem;
+    color: #686058;
+    line-height: 0.80rem;
+}
+
+.nearby .headline span {
+    font-size: 0.22rem;
+    color: #d1baa2;
+    line-height: 0.80rem;
+    margin-right: 0.12rem;
+}
+
+.nearby .headline img {
+    width: 0.22rem;
+    height: 0.22rem;
+    margin-top: 0.28rem;
+}
+
+.nearby .hot_item_wrap {
+    width: 7.1rem;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+}
+
+.nearby .hot_item_wrap .hot_item {
+    flex-shrink:0;
+    width: 4.5rem;
+    height: 100%;
+    margin-right: 0.2rem;
+    white-space: normal;
+}
+
+.nearby .hot_item img {
+    display: block;
+    width: 1.45rem;
+    height: 2rem;
+}
+
+.nearby .hot_item .describe {
+    width: 2.90rem;
+}
+
+.nearby .title, .nearby .author {
+    font-size: 0.26rem;
+    color: #686058;
+}
+
+.nearby .comment {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    color: #9a9a9a;
+}
+
+.nearby .c_user {
+    font-size: 0.18rem;
+    color: #9a9a9a;
+    margin-top: 0.1rem;
+}
+/* 附近热门结束 */
+
+/* 广告 */
+.add {
+    padding: 0;
+    margin: 0.20rem auto;
+}
+.add img {
+    display: block;
+    width: 100%;
+    border-radius: 0.10rem;
+}
+
+
+/* 灯幕榜单开始 */
+.recommend {
+    background-color: #fff;
+    border-radius: 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+    color: #686058;
+}
+
+.recommend h2 {
+    font-size: 0.34rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.recommend .class_item {
+    padding: 0 0.30rem 0.46rem;
+    position: relative;
+}
+
+.recommend .class_item:nth-child(1), .recommend .class_item:nth-child(2) {
+    border-right: 0.01rem #ccc solid;
+}
+
+.recommend h4 {
+    text-align: center;
+    font-size: 0.26rem;
+    margin-bottom: 0.20rem;
+}
+
+.recommend .rec_item {
+    margin-bottom: 0.50rem;
+}
+
+.recommend .rec_item img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.16rem;
+}
+
+.recommend .rec_item p {
+    font-size: 0.24rem;
+    line-height: 0.38rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu {
+    width: 0.22rem;
+    height: 0.22rem;
+    position: absolute;
+    bottom: 0.40rem;
+    left: 50%;
+    margin-left: -0.11rem;
+}
+
+/* 灯幕榜单结束 */
+
+
+/* 热门作者开始 */
+.hot_author {
+    margin-top: 0.20rem;
+    background-color: #fff;
+    border-radius: 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+    color: #686058;
+}
+
+.hot_author h2 {
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 1.10rem;
+}
+
+.hot_author .author_info {
+    padding: 0 0.20rem 0.40rem;
+}
+
+.hot_author .author_info img {
+    width: 100%;
+}
+
+.hot_author .information .name {
+    font-size: 0.28rem;
+    color: #686058;
+    margin-bottom: 0.14rem;
+    margin-right: 0.40rem;
+}
+
+.hot_author .information strong {
+    color: #686058;
+    font-weight: normal;
+}
+
+.hot_author .information {
+    font-size: 0.24rem;
+    color: #a2a2a2;
+    line-height: 0.36rem;
+}
+
+.hot_author .information .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+/* 热门作者结束 */
+
+/* 灯幕热门开始 */
+.hot_reading {
+    background-color: #fff;
+    border-radius: 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+    color: #686058;
+    padding-bottom: 0.76rem;
+    position: relative;
+}
+
+.hot_reading h2 {
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 1.10rem;
+}
+
+.hot_reading .reading_info {
+    padding: 0.30rem 0.30rem;
+    border-bottom: 0.02rem #f4f4f4 solid;
+    position: relative;
+}
+
+.hot_reading .reading_info:first-of-type {
+    padding: 0 0.30rem 0.30rem;
+}
+
+.hot_reading .reading_info:last-of-type {
+    border-bottom: none;
+}
+
+.hot_reading .reading_info .cover {
+    padding: 0;
+}
+
+.hot_reading .reading_info .cover img {
+    width: 100%;
+}
+
+.hot_reading .reading_info .title {
+    font-size: 0.26rem;
+}
+
+.hot_reading .reading_info .author {
+    font-size: 0.23rem;
+}
+
+.hot_reading .reading_info .desc {
+    font-size: 0.24rem;
+    color: #9a9a9a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin-top: 0.10rem;
+}
+
+.hot_reading .reading_info .hot_info {
+    font-size: 0.24rem;
+    color: #ff9292;
+    line-height: 0.36rem;
+    position: absolute;
+    top: 0.10rem;
+    right: 0.20rem;
+}
+/* 灯幕热门结束 */
+
+
+
+
+@media (min-width: 768rem) {
+    .nearby .hot_item_wrap {
+        width: 6rem;
+    }
+}
+@media (min-width: 992rem) {
+    .nearby .hot_item_wrap {
+        width: 6.3rem;
+    }
+}
+@media (min-width: 1200rem) {
+    .nearby .hot_item_wrap {
+        width: 6.1rem;
+    }
+}

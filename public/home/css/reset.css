@@ -1,0 +1,37 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {margin:0;padding:0}
+/*html {
+    font-size: 62.5%;   !*1rem=10px*!
+}*/
+/*html {
+    font-size: 100px;
+}*/
+body {
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input {
+    border: none;
+}
+input, button {
+    outline: none;
+}
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+body {
+    background-color: #f4f4f4;
+    letter-spacing: 0.03rem;
+}

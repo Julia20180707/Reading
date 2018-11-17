@@ -1,0 +1,244 @@
+/* 头部开始 */
+header {
+    height: 0.8rem;
+    background-color: #fef8f2;
+    border-bottom: 0.02rem solid #d4c0aa;
+    box-shadow: 0 0.1rem 0.15rem 0 rgb(254,248,242);
+    font-size: 0.3rem;
+    color: #d4c0aa;
+    line-height: 0.8rem;
+    z-index: 10;
+}
+
+header .addr {
+    text-align: left;
+}
+
+header .search {
+    text-align: right;
+}
+
+header .title {
+    font-size: 0.36rem;
+    text-align: center;
+}
+/* 头部结束 */
+
+/* 作者信息开始 */
+.user_info {
+    background-color: #fff;
+    margin-top: 0.80rem;
+    color: #9a9a9a;
+    padding: 0.36rem 0.28rem;
+    border-radius: 0.15rem;
+    margin-bottom: 0.20rem;
+    box-shadow: 0 0.20rem 0.20rem  #e6e6e6;
+}
+
+.user_info .user_info_top .icon img {
+    width: 100%;
+    margin-top: -40%;
+}
+
+.user_info .user_info_top .name .information h2 {
+    font-size: 0.37rem;
+    color: #686058;
+    line-height: 0.67rem;
+}
+
+.user_info .user_info_top .name .information p{
+    line-height: 0.55rem;
+    font-size: 0.26rem;
+    color: #9a9a9a;
+}
+
+.user_info .user_info_top .name .follow button {
+    font-size: 0.22rem;
+    color: #fff;
+    padding: 0.10rem 0.20rem;
+    background-color: #d4c0ab;
+    border: none;
+    border-radius: 0.03rem;
+}
+
+.user_info .user_info_top .name .follow p {
+    font-size: 0.22rem;
+    color: #686058;
+    text-align: center;
+}
+
+.user_info .user_info_mid{
+    padding: 0.40rem 0;
+}
+
+.user_info .desc {
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    color: #a6a6a6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* 作者信息结束 */
+
+/* 作品列表开始 */
+.works_list {
+    background-color: #fff;
+    border-radius: 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+    color: #686058;
+    padding-top: 0.35rem;
+}
+
+.works_list h2 {
+    font-size: 0.34rem;
+    text-align: center;
+}
+
+.works_list .work_info {
+    padding: 0.30rem 0.30rem;
+    border-bottom: 0.02rem #f4f4f4 solid;
+    position: relative;
+}
+
+.works_list .work_info:last-child {
+    border-bottom: none;
+}
+
+.works_list .work_info .cover {
+    padding: 0;
+}
+
+.works_list .work_info .cover img {
+    width: 100%;
+}
+
+.works_list .work_info .work_time {
+    font-size: 0.22rem;
+    color: #a6a6a6;
+}
+
+.works_list .work_info .cate {
+    font-size: 0.20rem;
+    border: 0.02rem #d0d0d0 solid;
+    border-radius: 0.03rem;
+    padding: 0.02rem 0.06rem;
+    margin-right: 0.20rem;
+}
+
+.works_list .work_info .title {
+    font-size: 0.28rem;
+    line-height: 0.64rem;
+}
+
+.works_list .work_info .tag {
+    font-size: 0.20rem;
+    color: #a5a5a5;
+    margin-bottom: 0.20rem;
+}
+
+.works_list .work_info .desc {
+    font-size: 0.24rem;
+    color: #9a9a9a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.works_list .work_info .hot_info {
+    font-size: 0.24rem;
+    color: #ff9292;
+    line-height: 0.36rem;
+    position: absolute;
+    top: 0;
+    right: 0.20rem;
+}
+
+.works_list .work_info .star {
+    width: 0.42rem;
+    height: 0.41rem;
+    position: absolute;
+    top: 0.45rem;
+    right: 0.40rem;
+    cursor: pointer;
+}
+
+.works_list .work_info img {
+    width: 100%;
+    height: 100%;
+}
+/* 作品列表结束 */
+
+/* 读者留言开始 */
+.messages_list {
+    background-color: #fff;
+    border-radius: 0.10rem;
+    box-shadow: 0 0.06rem 0.15rem 0.05rem rgb(230,230,230);
+    color: #686058;
+    padding: 0.35rem 0.50rem;
+    margin-top: 0.20rem;
+}
+
+.messages_list h2 {
+    font-size: 0.34rem;
+    text-align: center;
+}
+
+.messages_list .message_item {
+    padding: 0.20rem 0;
+    border-bottom: 0.02rem #f4f4f4 solid;
+}
+
+.messages_list .message_item:last-child {
+    border-bottom: none;
+}
+
+.messages_list .icon {
+    width: 0.90rem;
+    height: 0.90rem;
+    border-radius: 50%;
+    background-color: #1b6d85;
+    overflow: hidden;
+}
+
+.messages_list .icon img {
+    width: 100%;
+}
+
+.messages_list .message_info {
+    width: 85%;
+    font-size: 0.24rem;
+    color: #9a9a9a;
+    line-height: 0.36rem;
+}
+
+.messages_list .message_info .name {
+    color: #686058;
+    margin-right: 0.10rem;
+    margin-bottom: 0.15rem;
+}
+
+
+/* 读者留言结束 */
+
+@media all and (min-width: 12rem) {
+    .user_info {
+        margin-top: 0.80rem;
+    }
+}
+
+@media all and (min-width: 9.92rem) {
+    .user_info {
+        margin-top: 0.60rem;
+    }
+}
+
+@media all and (min-width: 7.68rem) {
+    .user_info {
+        margin-top: 0.40rem;
+    }
+}
