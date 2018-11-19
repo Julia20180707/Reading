@@ -18,10 +18,9 @@ class CreateBooksTable extends Migration
             $table->string('title')->comment("书名");
             $table->unsignedInteger('author_id')->comment("外键：关联作者id");
             $table->unsignedInteger('class_id')->comment("外键：关联分类id");
-            $table->text('class_id')->comment("外键：关联分类id");
             $table->string('description')->default('')->comment("书籍简介");
-            $table->text('book_info')->default('')->comment("作品信息");
-            $table->text('directory')->default('')->comment("书籍文件夹(随机字符串)");
+            $table->text('book_info')->comment("作品信息");
+            $table->text('directory')->comment("书籍文件夹(随机字符串)");
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@ class CreateBookAuthorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('books_authors', function (Blueprint $table) {
+        Schema::create('book_authors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->comment('作者姓名');
             $table->string('sex')->comment('作者性别');
