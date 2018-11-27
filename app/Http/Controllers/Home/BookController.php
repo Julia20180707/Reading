@@ -17,9 +17,17 @@ class BookController extends Controller
     {
         return view("home/author");
     }
-    //个人信息
-    public function mine()
-    {
-        return view("home/mine");
+    //分类
+    public function classify(){
+        return  view("home/classify");
+    }
+    //书籍详情
+    public function book_detail(){
+        return  view("home/book_detail");
+    }
+
+    //作者详情
+    public function author_detail(){
+        return view('/home/author');
     }
 }

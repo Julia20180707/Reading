@@ -1,0 +1,111 @@
+/* 头部结束 */
+.container{
+    padding: 0rem 0.2rem;
+}
+/*左侧导航栏*/
+.nav{
+    background-color: #fdf9f6;
+    border-right:0.02rem #f1e9e2 solid;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+}
+.nav .nav_list li {
+    height: 1.04rem;
+    line-height: 1.04rem;
+    border-bottom:  0.02rem #f1e9e2 solid;
+    text-align: center;
+}
+.nav .nav_list li a{
+    color:#6f6860;
+    font-size: 0.24rem;
+}
+.wrap{
+    margin-bottom: -0.7rem;
+    width: 5.8rem;
+    position: fixed;
+    top: 1rem;
+    z-index: 20;
+    background-color: #eeeeee;
+    margin-top: -0.2rem;
+    padding-top: 0.2rem;
+}
+.wrap_stance{
+    height: 2rem;
+}
+.img_wrap img{
+    width: 100%;
+}
+.search_wrap{
+    height: 1rem;
+    font-size: 0.3rem;
+    color: #7e7771;
+    line-height: 0.1rem;
+    padding: 0.3rem 0rem;
+}
+.search_wrap input{
+    margin-left: 0.08rem;
+    width: 0.23rem;
+    height: 0.23rem;
+    /*vertical-align: middle;*/
+}
+.book_list{
+    /*padding-top: 20px;*/
+    padding-left: 0.2rem;
+    margin-left: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0rem 0.2rem 0.2rem  #e6e6e6;
+    border-radius: 0.1rem;
+    margin-top: 0.8rem;
+}
+.book_list .book_info{
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    border-bottom:0.02rem #f4f4f4 solid ;
+    margin-top: 0rem;
+}
+.book_list .book_info .info{
+    padding-left: 0;
+    padding-right: 0.3rem;
+}
+.book_list .book_info img{
+    width: 100%;
+}
+.book_list .book_info h4,.book_list .book_info h3{
+    font-size: 0.22rem;
+    line-height: 0.4rem;
+    color: #6e675f;
+    font-weight: normal;
+}
+.book_list .info h3{
+    font-size: 0.28rem;
+}
+.book_list .info span{
+    font-size: 0.2rem;
+    color: #ff9292;
+    line-height: 0.6rem;
+}
+.book_list .info p{
+    font-size: 0.22rem;
+    line-height: 0.37rem;
+    color: #a0a0a0;
+}
+
+@media all and (min-width: 768px) {
+    .main{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .main{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .main{
+        width: 100%;
+    }
+}
+

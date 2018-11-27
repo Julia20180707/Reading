@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reading</title>
-    <script src="/home/js/responsive.js"></script>
-    <link rel="stylesheet" href="/home/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/home/css/reset.css">
-    <link rel="stylesheet" href="/home/css/index.css">
-</head>
-<body>
-    <!-- 头部开始 -->
-    <header>
-        <div class="container">
-            <div class="col-xs-4 addr">观典国际</div>
-            <div class="col-xs-4 title">灯慕</div>
-            <div class="col-xs-4 search"><span class="glyphicon glyphicon-search"></span></div>
-        </div>
-    </header>
-    <div class="header"></div>
-    <!-- 头部结束 -->
+{{--继承公共模板--}}
+@extends('layout/public')
 
+{{--替换顶部内容--}}
+{{--替换顶部内容--}}
+@section('title_left', '观典国际')
+@section('title', '灯慕')
+@section('title_right', 'glyphicon glyphicon-search')
+
+{{--替换主体--}}
+@section('main')
     <!-- 附近热门开始 -->
     <div class="container nearby clearfix">
         <div class="headline clearfix">
@@ -134,13 +121,15 @@
     <div class="container hot_author">
         <h2>热门作者</h2>
         <div class="clearfix author_info">
-            <div class="col-xs-3 col-sm-4 col-md-4">
-                <img src="/home/images/author1.png" />
-            </div>
-           <div class="col-xs-9 col-sm-8 col-md-8 information">
-               <p><span class="name">阿雅</span><span>粉丝 <strong>20452</strong></span></p>
-               <p class="desc">著名主持人，4年前跨界操刀进入码字界，不想一炮而红，时隔2年带着新书《所有流过的眼泪》回归大众视野，书中她毫无保留的剖析了自己的历程，消沉...</p>
-           </div>
+            <a href="/author_detail">
+                <div class="col-xs-3 col-sm-4 col-md-4">
+                    <img src="/home/images/author1.png" />
+                </div>
+               <div class="col-xs-9 col-sm-8 col-md-8 information">
+                   <p><span class="name">阿雅</span><span>粉丝 <strong>20452</strong></span></p>
+                   <p class="desc">著名主持人，4年前跨界操刀进入码字界，不想一炮而红，时隔2年带着新书《所有流过的眼泪》回归大众视野，书中她毫无保留的剖析了自己的历程，消沉...</p>
+               </div>
+            </a>
         </div>
     </div>
     <!-- 热门作者结束 -->
@@ -200,5 +189,4 @@
         <img src="/home/images/menu.png" class="menu" />
     </div>
     <!-- 灯幕热门结束 -->
-</body>
-</html>
+@endsection

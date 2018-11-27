@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reading</title>
-    <script src="/home/js/responsive.js"></script>
-    <link rel="stylesheet" href="/home/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/home/css/reset.css">
-    <link rel="stylesheet" href="/home/css/author.css">
-</head>
-<body>
-    <!-- 头部开始 -->
-    <header>
-        <div class="container">
-            <div class="col-xs-4 addr"><</div>
-            <div class="col-xs-4 title">热门作者</div>
-            <div class="col-xs-4 search"><span class="glyphicon glyphicon-share"></span></div>
-        </div>
-    </header>
-    <!-- 头部结束 -->
+{{--继承公共模板--}}
+@extends('layout/public')
 
+{{--替换顶部内容--}}
+{{--替换顶部内容--}}
+@section('title', '热门作者')
+@section('title_right', 'glyphicon glyphicon-share')
+
+{{--替换主体--}}
+@section('main')
     <!-- 作者信息开始 -->
     <div class="container user_info clearfix">
         <div class="row user_info_top">
@@ -94,5 +81,4 @@
         </div>
     </div>
     <!-- 读者留言结束 -->
-</body>
-</html>
+@endsection

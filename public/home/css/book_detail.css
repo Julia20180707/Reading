@@ -1,0 +1,195 @@
+.book_info {
+    background-color: #fff;
+    margin-top: 0.8rem;
+    color: #9a9a9a;
+    padding:0.2rem 0.28rem 0.36rem 0.28rem;
+    border-bottom: 0.02rem solid #f4f4f4;
+}
+.book_info .book_info_top .info{
+    padding-left: 0rem;
+}
+.book_info .book_info_top .icon img {
+    width: 100%;
+    margin-top: -40%;
+    margin-bottom: 0.1rem;
+}
+.book_info .book_info_top .information h2,.book_info .book_info_top .information h4{
+    font-size: 0.24rem;
+    color: #686058;
+    line-height: 0.44rem;
+    font-weight: normal;
+}
+.book_info .book_info_top .information h2 .user_tag{
+    width: 0.58rem;
+    height: 0.28rem;
+    border: 0.02rem solid #d0d0d0;
+    color: #d0d0d0;
+    font-size: 0.16rem;
+    padding: 0.08rem;
+    margin-right: 0.1rem;
+    border-radius: 0.05rem;
+}
+.book_info .book_info_top .information h4{
+    font-size: 0.2rem;
+    line-height: 0.6rem;
+}
+.book_info .book_info_top .information p{
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+}
+.book_info .book_info_top .information span{
+    color: #ff9292;
+    font-size: 0.18rem;
+    line-height: 0.44rem;
+}
+.book_info .book_info_top .book_tag_list{
+    margin-top:1.4rem ;
+}
+.book_info .book_info_top .book_tag_list span{
+    font-size: 0.18rem;
+    line-height: 0.44rem;
+    margin-right: 0.1rem;
+}
+.book_info_des p{
+    font-size: 0.2rem;
+    line-height: 0.45rem;
+}
+/*主编*/
+.peo{
+    padding: 0.15rem 0.28rem 0.24rem 0.28rem;
+    background-color: #fff;
+    border-bottom: 0.02rem solid #f4f4f4;
+}
+.peo h3{
+    font-size: 0.26rem;
+    color: #686058;
+}
+.peo p{
+    font-size: 0.2rem;
+    line-height: 0.38rem;
+    color: #9a9a9a;
+}
+/*读者*/
+.peo{
+    border-bottom: 0.02rem #f4f4f4 solid;
+}
+.reader{
+    padding: 0.2rem;
+}
+.reader .reader_img  img{
+    width: 100%;
+    margin-left:0.1rem;
+}
+.reader .reader_top{
+    padding-bottom: 0.2rem;
+}
+.reader .reader_top button{
+    background-color: #d4c0ab;
+    color: #fff;
+}
+.reader .reader_middle{
+    padding: 0.5rem;
+}
+.reader .reader_middle_wrap .reader_comment h4{
+    display: inline-block;
+    font-size: 0.23rem;
+    color: #716962;
+    margin-right: 0.22rem;
+}
+.reader .reader_middle_wrap .reader_comment span {
+    display: inline-block;
+    font-size: 0.23rem;
+    color: #9a9a9a;
+}
+.reader .reader_middle_wrap .reader_comment p{
+    line-height: 0.35rem;
+    color: #9b9b9b;
+}
+.reader .icon{
+    padding-top: 0.05rem;
+    padding-bottom: 0.3rem;
+}
+.reader .icon i,.reader .icon span{
+    font-size: 0.28rem;
+    margin-right: 0.08rem;
+    color: #e2ccb5;
+}
+.reader .icon span{
+    margin-right: 0.2rem;
+    color: #9a9a9a;
+}
+.reader_bottom .menu_wrap{
+    line-height: 0.25rem;
+    text-align: center;
+}
+.reader_bottom .menu_wrap span{
+    font-size: 0.22rem;
+    color: #d1baa2;
+    vertical-align: middle;
+    margin-right: 0.12rem;
+}
+.reader_bottom .menu_wrap img{
+    width: 0.22rem;
+    vertical-align: middle;
+}
+/*目录*/
+.catalog .list{
+    padding-left: 0.33rem;
+    padding-top:0.2rem;
+}
+.catalog .list p{
+    font-size: 0.2rem;
+    line-height: 0.36rem;
+}
+.trial_read{
+    padding-bottom: 0rem;
+}
+.trial_read .text{
+    padding-left: 0.33rem;
+    padding-top:0.2rem;
+    /*padding-bottom: 20px;*/
+}
+.user_oper div{
+    text-align: center;
+    line-height: 0.78rem;
+}
+.user_oper .collec{
+    background-color: #fdf9f5;
+}
+.user_oper .collec a{
+    color: #8b847e;
+    font-size: 0.26rem;
+}
+.user_oper .add_bookshelf{
+    background-color: #e9d7c5;
+}
+.user_oper .add_bookshelf a{
+    color: #ffffff;
+    font-size: 0.26rem;
+}
+@media all and (min-width: 768px) {
+    .book_info {
+        margin-top: 50px;
+    }
+    .main{
+        width:96%;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .book_info {
+        margin-top: 70px;
+    }
+    .main{
+        width:96%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .book_info {
+        margin-top: 90px;
+    }
+    .main{
+        width:96%;
+    }
+}
