@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::prefix("/")->namespace("Home")->group(function () {
 
+
     //用户注册
     Route::get("register", "RegisterController@index");//加载注册页面
     Route::post("register", "RegisterController@register");//执行注册
@@ -40,3 +41,30 @@ Route::prefix("/")->namespace("Home")->group(function () {
     Route::get("setting", "UserController@setting")->middleware('auth');//个人信息设置
     Route::post("save_setting", "UserController@save_setting")->middleware('auth');//修改保存
 });
+
+//    Route::get("index", "BookController@index");
+//    Route::get("author", "BookController@author");
+//    Route::get("mine", "BookController@mine");
+//});
+
+
+//后台路由组
+Route::prefix("admin")->namespace("Admin")->group(function () {
+    /* 后台首页开始 */
+    Route::get("index", "BookController@index");
+    /* 后台首页结束 */
+
+    /* 分类管理模块开始 */
+    Route::get("classify", "BookController@classify");
+    Route::get("classify_delete/{id}", "BookController@classify_delete");
+    Route::post("classify_add", "BookController@classify_add");
+    Route::get("classify_edit/{id}", "BookController@classify_edit");
+    Route::post("classify_save", "BookController@classify_save");
+    /* 分类管理模块结束 */
+
+    /* 书籍管理模块开始 */
+    Route::get("upload", "BookController@upload");
+    Route::post("books_upload", "BookController@books_upload");
+    /* 书籍管理模块结束 */
+});
+
