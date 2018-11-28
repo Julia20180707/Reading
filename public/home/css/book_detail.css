@@ -13,8 +13,16 @@
     margin-top: -40%;
     margin-bottom: 0.1rem;
 }
+.book_info .book_info_top  .read_btn{
+    position: absolute;
+    right: 0.8rem;
+    background-color: #d4c0ab;
+}
+.book_info .book_info_top  .read_btn a{
+    color: #ffffff;
+}
 .book_info .book_info_top .information h2,.book_info .book_info_top .information h4{
-    font-size: 0.24rem;
+    font-size: 0.3rem;
     color: #686058;
     line-height: 0.44rem;
     font-weight: normal;
@@ -44,13 +52,16 @@
 }
 .book_info .book_info_top .book_tag_list{
     margin-top:1.4rem ;
+    padding-right: 0.4rem;
 }
-.book_info .book_info_top .book_tag_list span{
+.book_info .book_info_top .book_tag_list i{
     font-size: 0.18rem;
     line-height: 0.44rem;
     margin-right: 0.1rem;
+    color: #e2ccb5;
 }
 .book_info_des p{
+    padding-left: 0.2rem;
     font-size: 0.2rem;
     line-height: 0.45rem;
 }
@@ -78,6 +89,7 @@
 }
 .reader .reader_img  img{
     width: 100%;
+    border-radius: 50%;
     margin-left:0.1rem;
 }
 .reader .reader_top{
@@ -89,6 +101,8 @@
 }
 .reader .reader_middle{
     padding: 0.5rem;
+    height: 5rem;
+    overflow: hidden;
 }
 .reader .reader_middle_wrap .reader_comment h4{
     display: inline-block;
@@ -148,6 +162,14 @@
     padding-left: 0.33rem;
     padding-top:0.2rem;
     /*padding-bottom: 20px;*/
+}
+.user_oper_model{
+    height: 0.78rem;
+}
+.user_oper{
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
 }
 .user_oper div{
     text-align: center;

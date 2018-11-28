@@ -17,7 +17,7 @@
 <!-- 头部开始 -->
 <header>
     <div class="container">
-        <div class="col-xs-4 addr"><i class="glyphicon glyphicon-menu-left"></i></div>
+        <div class="col-xs-4 addr"><a href="/index"><i class="glyphicon glyphicon-menu-left"></i></a></div>
         <div class="col-xs-4 title">登录</div>
         <div class="col-xs-4 search"></div>
     </div>

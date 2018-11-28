@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/home/index');
 });
 
 
@@ -30,10 +30,31 @@ Route::prefix("/")->namespace("Home")->group(function () {
     Route::get("logout", "LoginController@logout");//执行退出
 
     Route::get("index", "BookController@index");//首页
-    Route::get("author", "BookController@author");//作者信息
+    Route::get("bookcase", "BookController@bookcase");//书架
+    Route::get("collect", "BookController@collect");//收藏
+
+    Route::get("author/{id}", "BookController@author");//作者信息
+    Route::get("fan", "UserController@fan");//关注作者信息
+    Route::get("un_fan/{id}", "UserController@un_fan");//取消关注作者信息
+    Route::get("/add_like_author/{id}", "UserController@add_like_author");//作者添加到收藏
+
     Route::get("classify", "BookController@classify");//分类页面
-    Route::get("book_detail", "BookController@book_detail");//书籍详情
+
+
+    Route::get("book_detail/{id}", "BookController@book_detail");//书籍详情
     Route::get("author_detail", "BookController@author_detail");//作者详情
+    Route::get("/book/{id}/zan", "BookController@zan");//书籍点赞
+    Route::get("/book/{id}/unzan", "BookController@unzan");//书籍取消赞
+    Route::post("/book_comment/{id}", "BookController@book_comment");//书籍评论
+    Route::get("/comment/{model}/zan", "CommentController@zan");//书籍评论点赞
+    Route::get("/comment/{id}/unzan", "CommentController@unzan");//书籍评论取消赞
+
+    Route::get("/add_book/{id}", "BookController@add_book");//书籍添加到书架
+    Route::get("/remove_book/{id}", "BookController@remove_book");//移除书架
+
+    Route::get("/add_like_book/{id}", "BookController@add_like_book");//书籍添加到收藏
+    Route::get("/un_like_book/{id}", "BookController@un_like_book");//取消收藏
+
 
 
 
@@ -50,6 +71,12 @@ Route::prefix("/")->namespace("Home")->group(function () {
 
 //后台路由组
 Route::prefix("admin")->namespace("Admin")->group(function () {
+
+    /*用户登录*/
+    Route::get("login", "UserController@login");
+    Route::post("dologin", "UserController@dologin");
+
+
     /* 后台首页开始 */
     Route::get("index", "BookController@index");
     /* 后台首页结束 */

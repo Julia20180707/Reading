@@ -7,7 +7,17 @@
     margin-bottom: 0.2rem;
     box-shadow: 0rem 0.2rem 0.2rem  #e6e6e6;
 }
-
+.user_info .def_img{
+    text-align: center;
+}
+.user_info .text_wrap{
+    text-align: center;
+    padding-top: 1rem;
+}
+.user_info .def_img img{
+    width: 2rem;
+    border-radius: 50%;
+}
 .user_info .user_info_top .icon img {
     width: 100%;
     margin-top: -40%;

@@ -40,7 +40,7 @@
                 <div class=" book_list">
                     <div class="book_info">
                         <div class="row">
-                            <a href="/book_detail">
+                            <a href="/book_detail/1">
                                 <div class="col-xs-4">
                                     <img src="/home/images/1_10.png"/>
                                 </div>

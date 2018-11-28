@@ -16,11 +16,11 @@ class LoginController extends Controller
     //执行用户登录
     public function login(Request $request){
         $text=$request->name;
-        if (Auth::attempt(['name' =>$text, 'password' => request('password')])) {
+        if (Auth::guard("web")->attempt(['name' =>$text, 'password' => request('password')])) {
             // 认证通过...
             return redirect('/index');
         }else{
-            if(Auth::attempt(['email' =>$text, 'password' => request('password')])){
+            if(Auth::guard("web")->attempt(['email' =>$text, 'password' => request('password')])){
                 return redirect('/index');
             }else{
                 return back();
