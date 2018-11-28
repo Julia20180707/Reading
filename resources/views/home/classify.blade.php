@@ -13,7 +13,7 @@
             <aside class="col-xs-2 nav">
                 <nav class="nav_list">
                     @foreach($classifies as $classify)
-                    <li><a href="/classify/{{$classify->id}}">{{$classify->title}}</a></li>
+                        <li><a href="/classify/{{$classify->id}}">{{$classify->title}}</a></li>
                     @endforeach
                 </nav>
             </aside>
@@ -24,9 +24,9 @@
 
                     </div>
                     <div class=" search_wrap">
-                        <div class="col-xs-4">热门<input type="checkbox"></input></div>
-                        <div class="col-xs-4">推荐<input type="checkbox"></input></div>
-                        <div class="col-xs-4">排行<input type="checkbox"></input></div>
+                        <div class="col-xs-4">热门<input type="checkbox"></div>
+                        <div class="col-xs-4">推荐<input type="checkbox"></div>
+                        <div class="col-xs-4">排行<input type="checkbox"></div>
                     </div>
                 </div>
                 <div class="wrap_stance"></div>

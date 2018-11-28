@@ -40,6 +40,7 @@
     <input type="hidden" id="directory" name="directory" value="{{$directory}}">
     <aside class="col-xs-3 nav catalog">
         <nav class="nav_list">
+            <a href="/index"><li style="color: #8b847e;">主页</li></a>
             @foreach($chapters as $chapter)
                 <a href="/read/{{$directory}}/{{$chapter->chapter_name}}"><li style="color: #8b847e;">第{{$chapter->chapter_id}}章</li></a>
             @endforeach
@@ -49,11 +50,24 @@
     <div class="container">
         <div class="row trial_read peo">
             <div class="text">
-                <p class="content" style="font-size: 0.28rem; line-height: 0.5rem; padding-bottom: 0.8rem">{{$contents}}</p>
+                <p class="content" style="font-size: 0.28rem; line-height: 0.5rem; padding-bottom: 1.5rem">{{$contents}}</p>
             </div>
             <div class="row user_oper">
-                <a href="/read/{{$directory}}/{{$chapter_name_prev}}"><div class="col-xs-6 collec prev" style="color: #8b847e;">上一章</div></a>
-                <a href="/read/{{$directory}}/{{$chapter_name_next}}"><div class="col-xs-6 add_bookshelf next" style="color: #fff;">下一章</div></a>
+                @if(isset($chapter_name_prev))
+                    <a href="/read/{{$directory}}/{{$chapter_name_prev}}">
+                @else
+                    <a href="#">
+                @endif
+                        <div class="col-xs-6 collec prev" style="color: #8b847e;">上一章</div>
+                    </a>
+
+                @if(isset($chapter_name_next))
+                    <a href="/read/{{$directory}}/{{$chapter_name_next}}">
+                @else
+                    <a href="#">
+                @endif
+                        <div class="col-xs-6 add_bookshelf next" style="color: #fff;">下一章</div>
+                    </a>
             </div>
         </div>
     </div>

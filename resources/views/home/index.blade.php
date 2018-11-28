@@ -17,15 +17,15 @@
         </div>
         <div class="hot_item_wrap clearfix">
             @foreach($books as $book)
-            <div class="hot_item fl">
+            <a class="hot_item fl" href="/book_detail/{{$book->id}}">
                 <img src="/{{$book->cover_pic}}" alt="" class="fl">
                 <div class="fr describe">
                     <p class="title">{{$book->title}}</p>
-                    <p class="author">作者：{{$book->author->name}}</p>
+                    <p class="author">作者：{{$book->u_author->name}}</p>
                     <p class="comment">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
                     <p class="c_user fr">—毛菇菇评</p>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>
@@ -126,50 +126,21 @@
     <!-- 灯幕热门开始 -->
     <div class="container hot_reading">
         <h2>灯幕热门</h2>
-        <div class="clearfix reading_info">
-            <div class="col-xs-3 cover">
-                <img src="/home/images/1_31.png">
-            </div>
-            <div class="col-xs-9">
-                <p class="title">杀死一只知更鸟</p>
-                <p class="author">作者：<span>[美]哈珀·李</span></p>
-                <p class="hot_info">253254人在读</p>
-                <p class="desc">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
-            </div>
-        </div>
-        <div class="clearfix reading_info">
-            <div class="col-xs-3 cover">
-                <img src="/home/images/1_33.png">
-            </div>
-            <div class="col-xs-9">
-                <p class="title">杀死一只知更鸟</p>
-                <p class="author">作者：<span>[美]哈珀·李</span></p>
-                <p class="hot_info">253254人在读</p>
-                <p class="desc">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
-            </div>
-        </div>
-        <div class="clearfix reading_info">
-            <div class="col-xs-3 cover">
-                <img src="/home/images/1_35.png">
-            </div>
-            <div class="col-xs-9">
-                <p class="title">杀死一只知更鸟</p>
-                <p class="author">作者：<span>[美]哈珀·李</span></p>
-                <p class="hot_info">253254人在读</p>
-                <p class="desc">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
-            </div>
-        </div>
-        <div class="clearfix reading_info">
-            <div class="col-xs-3 cover">
-                <img src="/home/images/1_37.jpg">
-            </div>
-            <div class="col-xs-9">
-                <p class="title">杀死一只知更鸟</p>
-                <p class="author">作者：<span>[美]哈珀·李</span></p>
-                <p class="hot_info">253254人在读</p>
-                <p class="desc">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
-            </div>
-        </div>
+        @foreach($all_books as $book)
+            <a href="/book_detail/{{$book->id}}">
+                <div class="clearfix reading_info">
+                    <div class="col-xs-3 cover">
+                        <img src="/{{$book->cover_pic}}">
+                    </div>
+                    <div class="col-xs-9">
+                        <p class="title">{{$book->title}}</p>
+                        <p class="author">作者：<span>{{$book->u_author->name}}</span></p>
+                        <p class="hot_info">253254人在读</p>
+                        <p class="desc">{{$book->description}}</p>
+                    </div>
+                </div>
+            </a>
+        @endforeach
         <img src="/home/images/menu.png" class="menu" />
     </div>
     <!-- 灯幕热门结束 -->

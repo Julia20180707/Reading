@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Fan;
 use App\User;
+use App\Collect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +14,8 @@ class UserController extends Controller
     //显示我的页面
     public function index(){
 
-        return view('home/mine');
+        $books=collect::where('user_id','=',\Auth::id())->orderBy('updated_at','desc')->get();
+        return view('home/mine',compact('books'));
     }
 
     //进行个人信息修改
@@ -76,4 +79,35 @@ class UserController extends Controller
 
         return redirect('/setting');
     }
+
+
+    public function add_like_author($id){
+
+        $date=[
+            'fan_id'=>\Auth::id(),
+            'star_id'=>$id,
+        ];
+
+        Fan::create($date);
+
+        return back();
+
+    }
+
+    public function fan(){
+
+        $authors=Fan::where('fan_id','=',\Auth::id())->get();
+
+        return view('/home/fan',compact('authors'));
+    }
+
+    public function un_fan($id)
+    {
+        //取消关注，就是删除指定书籍id的指定用户id的信息
+        Fan::where('star_id','=',$id)->where('fan_id','=',\Auth::id())->delete();
+
+        //渲染
+        return back();
+    }
+
 }

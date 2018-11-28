@@ -77,6 +77,7 @@ header .title {
 }
 
 .nearby .hot_item_wrap .hot_item {
+    display: block;
     flex-shrink:0;
     width: 4.5rem;
     height: 100%;
