@@ -17,6 +17,11 @@ li {
 input {
     border: none;
 }
+input:focus{
+    border: none !important;
+
+    box-shadow: none !important;
+}
 input, button {
     outline: none;
 }

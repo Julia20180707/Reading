@@ -1,0 +1,44 @@
+/*用户头像*/
+.user_pic_wrap{
+    padding: 1.5rem;
+    text-align: center;
+}
+.user_pic_wrap img{
+    width: 2rem;
+    height: 2rem;
+}
+/*用户头像*/
+/*登录表单*/
+
+.bg{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: url("/home/images/bg.jpg") no-repeat;
+    background-size: 100% 95%;
+
+}
+
+.login_group input,.login_group label{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    height: 0.9rem;
+    font-size: 0.28rem;
+    line-height: 0.9rem;
+}
+.login_group input{
+    width: 5rem;
+}
+.login_group .text{
+    padding:0rem;
+    margin-left: 0.6rem;
+}
+.login_group .btn_wrap{
+    text-align: center;
+}
+.login_group .register_btn{
+    padding: 0.2rem 1.8rem;
+    margin-top: 0.5rem;
+    font-size: 0.3rem;
+}
+/*登录表单*/

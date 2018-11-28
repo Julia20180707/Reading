@@ -17,9 +17,9 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('authority')->default(1)->comment('用户权限');
             $table->string('name')->unique()->comment("用户名");
+            $table->date('birthday')->default('2018-11-26')->comment("生日");
             $table->unsignedInteger('sex')->default(3)->comment("性别");
             $table->string('email')->unique()->comment("邮箱");
-            $table->date('birthday')->comment("生日");
             $table->string('password')->comment("密码");
             $table->string('duration')->default(0)->comment("读书时长");
             $table->string('photo',255)->default('');

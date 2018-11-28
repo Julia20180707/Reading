@@ -72,6 +72,10 @@ header .title {
     -webkit-overflow-scrolling:touch;
 }
 
+.nearby .hot_item_wrap::-webkit-scrollbar {
+    display:none;
+}
+
 .nearby .hot_item_wrap .hot_item {
     flex-shrink:0;
     width: 4.5rem;

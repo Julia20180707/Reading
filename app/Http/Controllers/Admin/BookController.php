@@ -73,7 +73,7 @@ class BookController extends Controller
     //上传新书
     public function books_upload(Request $request)
     {
-        $data = $request->except('_token', 'author', 'book_content');
+        $data = $request->except('_token', 'author', 'book_content', 'cover_pic');
         $res = DB::table('users')->where('name', $request->author)->get();
 //        $res = DB::select("select * from users where name=" . "'" . $request->author . "'");
         if (!count($res)) {
@@ -88,11 +88,18 @@ class BookController extends Controller
 
         $data['author_id'] = $user_id;
 
-        $path = $request->file("book_content")->store("");
+        $p = $request->file("book_content")->store("zip");
+        $path = explode("/", $p)[1];
+
         //提取压缩文件名中除去 ".zip" 的部分作为目录存储在books表中
         $directory = explode(".", $path)[0];
 
         $data['directory'] = $directory;
+
+        // 图片上传路径
+        $pic_path = $request->file("cover_pic")->store("cover_pics");
+        $data['cover_pic'] = $pic_path;
+
         $book = Book::create($data);
 
         //将上传的压缩包解压到books目录 解压成功返回true  失败返回false
