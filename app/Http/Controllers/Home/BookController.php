@@ -98,7 +98,11 @@ class BookController extends Controller
     }
 
     //发布书籍评论
-    public function book_comment(Request $request,$book_id){
+    public function book_comment(Request $request,$book_id)
+    {
+        if (!\Auth::check()) {
+            return redirect("/login");
+        }
 
         $date=[
             'user_id'=>\Auth::id(),
@@ -153,6 +157,7 @@ class BookController extends Controller
     //书籍添加到收藏
     public function add_like_book($id){
 
+
         $date=[
             'user_id'=>\Auth::id(),
             'book_id'=>$id,
@@ -192,6 +197,10 @@ class BookController extends Controller
     //读书页面
     public function read($directory, $chapter_name)
     {
+        if (!\Auth::check()) {
+            return redirect("/login");
+        }
+
         $book = Book::where('directory', $directory)->get()[0];
         //章节相对路径
         $path = 'books/' . $book->directory . '/' . $book->title . '/' . $chapter_name . '.txt';

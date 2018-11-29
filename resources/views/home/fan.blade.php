@@ -3,6 +3,7 @@
 
 {{--替换顶部内容--}}
 {{--替换顶部内容--}}
+@section('title_left', 'glyphicon glyphicon-menu-left')
 @section('title', '关注作者')
 @section('title_right', 'glyphicon glyphicon-comment')
 

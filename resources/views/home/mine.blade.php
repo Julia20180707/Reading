@@ -67,7 +67,7 @@
                     <h2>还没有书籍哦</h2>
                 @else
                     @foreach($books as $book)
-                        <a href="/book_detail/{{$book->id}}">
+                        <a href="/book_detail/{{$book->book->id}}">
                             <div class="col-xs-10 book_info_wrap">
                                 <div class="col-xs-5 img_wrap">
                                     <img src="/{{$book->book->cover_pic}}"/>

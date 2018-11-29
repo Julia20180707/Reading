@@ -14,12 +14,17 @@ class UserController extends Controller
     }
 
     public function dologin(Request $request){
-        $text=$request->name;
-        if (Auth::guard("admin")->attempt(['name' =>$text, 'password' => request('password')])) {
+        if (Auth::guard("admin")->attempt(['name' =>request('name'), 'password' => request('password')])) {
             // 认证通过...
             return redirect('/admin/index');
         }else{
             return back();
         }
+    }
+
+    public  function logout(){
+        Auth::guard("admin")->logout();
+
+        return redirect('/admin/login');
     }
 }

@@ -28,6 +28,8 @@ class LoginController extends Controller
         }
     }
 
+
+
     //执行用户退出
     public function logout(){
 
