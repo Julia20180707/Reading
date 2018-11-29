@@ -39,10 +39,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">选择文件夹</label>
+                                <label class="col-sm-2 col-sm-2 control-label">选择书籍压缩包 <span style="color: red;">（请上传 Zip 文档）</span></label>
                                 <div class="col-sm-10 choose_directory">
                                     {{--<input type="file" title="点击选择文件夹" multiple webkitdirectory name="book_content" />--}}
-                                    <input type="file" title="点击选择文件夹" name="book_content" />
+                                    <input type="file" title="点击选择压缩包" name="book_content" />
                                 </div>
                             </div>
 

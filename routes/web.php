@@ -79,13 +79,15 @@ Route::prefix("/")->namespace("Home")->group(function () {
 });
 
 
+
+/*用户登录*/
+Route::get("/admin/login", "Admin\UserController@login");
+Route::post("/admin/dologin", "Admin\UserController@dologin");
+Route::get("/admin/logout", "Admin\UserController@logout");
+
 //后台路由组
 Route::prefix("admin")->namespace("Admin")->group(function () {
 
-    /*用户登录*/
-    Route::get("login", "UserController@login");
-    Route::post("dologin", "UserController@dologin");
-    Route::get("logout", "UserController@logout");
 
 
     /* 后台首页开始 */
@@ -103,5 +105,21 @@ Route::prefix("admin")->namespace("Admin")->group(function () {
     /* 书籍管理模块开始 */
     Route::get("upload", "BookController@upload")->middleware('CheckAuth');
     Route::post("books_upload", "BookController@books_upload")->middleware('CheckAuth');
+
+    Route::get("classify", "BookController@classify")->middleware('CheckAuth');  //加载分类页面
+    Route::get("classify_delete/{id}", "BookController@classify_delete")->middleware('CheckAuth');   //删除某分类
+    Route::post("classify_add", "BookController@classify_add")->middleware('CheckAuth');     //添加分类
+    Route::get("classify_edit/{id}", "BookController@classify_edit")->middleware('CheckAuth');   //编辑分类
+    Route::post("classify_save", "BookController@classify_save")->middleware('CheckAuth');   //保存修改后的分类
+    /* 分类管理模块结束 */
+
+    /* 书籍管理模块开始 */
+    Route::get("upload", "BookController@upload")->middleware('CheckAuth');      //加载上传书籍页面
+    Route::post("books_upload", "BookController@books_upload")->middleware('CheckAuth');     //执行书籍上传
+    Route::get("books_manage", "BookController@books_manage")->middleware('CheckAuth');     //加载书籍管理页面
+    Route::get("book_edit/{id}", "BookController@book_edit")->middleware('CheckAuth');     //加载修改书籍信息页面
+    Route::post("book_save", "BookController@book_save")->middleware('CheckAuth');     //保存书籍信息修改
+    Route::get("upload_chapter", "BookController@upload_chapter")->middleware('CheckAuth');     //加载上传章节页面
+    Route::post("chapter_save", "BookController@chapter_save")->middleware('CheckAuth');     //执行章节上传
     /* 书籍管理模块结束 */
 });

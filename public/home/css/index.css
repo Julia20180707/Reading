@@ -161,6 +161,7 @@ header .title {
 .recommend .rec_item img {
     display: block;
     width: 100%;
+    height: 2.8rem;
     margin-bottom: 0.16rem;
 }
 
