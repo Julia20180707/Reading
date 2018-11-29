@@ -14,11 +14,19 @@
     <link rel="stylesheet" href="/home/css/mine.css">
     <link rel="stylesheet" href="/home/css/classify.css">
     <link rel="stylesheet" href="/home/css/book_detail.css">
+    <script>
+        $(function () {
+            $('#back').click(function () {
+                history.back(-1);
+            })
+        })
+
+    </script>
 </head>
 <body>
 <header>
     <div class="container">
-        <div class="col-xs-4 addr"><a href="/classify"><span class="glyphicon glyphicon-menu-left"></span></a></div>
+        <div class="col-xs-4 addr"><a href="/classify" id="back"><span class="glyphicon glyphicon-menu-left"></span></a></div>
         <div class="col-xs-4 title">书籍详情</div>
         <div class="col-xs-4 search"></div>
     </div>

@@ -32,12 +32,17 @@ Route::prefix("/")->namespace("Home")->group(function () {
 
     Route::get("index", "BookController@index");//首页
     Route::get("author", "BookController@author");//作者信息
+
     Route::get("classify/{id?}", "BookController@classify");//分类页面
+
     Route::get("book_detail/{id}", "BookController@book_detail");//书籍详情
     Route::get("catalog/{book_id}", "BookController@catalog");//书籍目录页面
     Route::get("read/{directory}/{chapter_name}", "BookController@read");//读书页面
 
-
+    //书籍分类页面
+    Route::get("popular", "BookController@popular");//热门
+    Route::get("recommend", "BookController@recommend");//推荐
+    Route::get("ranking", "BookController@ranking");//排行
 
 
     Route::get("bookcase", "BookController@bookcase");//书架
@@ -84,19 +89,19 @@ Route::prefix("admin")->namespace("Admin")->group(function () {
 
 
     /* 后台首页开始 */
-    Route::get("index", "BookController@index");
+    Route::get("index", "BookController@index")->middleware('CheckAuth');
     /* 后台首页结束 */
 
     /* 分类管理模块开始 */
-    Route::get("classify", "BookController@classify");
-    Route::get("classify_delete/{id}", "BookController@classify_delete");
-    Route::post("classify_add", "BookController@classify_add");
-    Route::get("classify_edit/{id}", "BookController@classify_edit");
-    Route::post("classify_save", "BookController@classify_save");
+    Route::get("classify", "BookController@classify")->middleware('CheckAuth');
+    Route::get("classify_delete/{id}", "BookController@classify_delete")->middleware('CheckAuth');
+    Route::post("classify_add", "BookController@classify_add")->middleware('CheckAuth');
+    Route::get("classify_edit/{id}", "BookController@classify_edit")->middleware('CheckAuth');
+    Route::post("classify_save", "BookController@classify_save")->middleware('CheckAuth');
     /* 分类管理模块结束 */
 
     /* 书籍管理模块开始 */
-    Route::get("upload", "BookController@upload");
-    Route::post("books_upload", "BookController@books_upload");
+    Route::get("upload", "BookController@upload")->middleware('CheckAuth');
+    Route::post("books_upload", "BookController@books_upload")->middleware('CheckAuth');
     /* 书籍管理模块结束 */
 });

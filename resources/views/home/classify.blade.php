@@ -24,9 +24,9 @@
 
                     </div>
                     <div class=" search_wrap">
-                        <div class="col-xs-4">热门<input type="checkbox"></div>
-                        <div class="col-xs-4">推荐<input type="checkbox"></div>
-                        <div class="col-xs-4">排行<input type="checkbox"></div>
+                        <label class="col-xs-4"><a href="/popular" style="color: #af997d">  热门<input type="radio" name="option" @if($select==1) checked @endif></a></label>
+                        <label class="col-xs-4"><a href="/recommend" style="color: #af997d">推荐<input type="radio" name="option" @if($select==2) checked @endif></a></label>
+                        <label class="col-xs-4"><a href="/ranking" style="color: #af997d">  排行<input type="radio" name="option" @if($select==3) checked @endif></a></label>
                     </div>
                 </div>
                 <div class="wrap_stance"></div>
@@ -51,3 +51,11 @@
         </div>
     </div>
 @endsection
+<script src="/home/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.option').click(function () {
+
+        })
+    })
+</script>

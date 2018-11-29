@@ -72,4 +72,11 @@ class Book extends Model
         //建立一对多的正向关联
         return $this->hasMany('App\Collect', 'book_id', 'id')->where('user_id','=',$user_id);
     }
+
+    //统计收藏的数量
+    public function collects()
+    {
+        //建立一对多的正向关联
+        return $this->hasMany('App\Collect','book_id','id');
+    }
 }

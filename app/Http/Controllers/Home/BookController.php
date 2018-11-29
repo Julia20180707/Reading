@@ -45,7 +45,9 @@ class BookController extends Controller
 
         $books = Book::where('class_id', $id)->withCount('book_goods')->get()->sortByDesc('book_goods_count');
 
-        return  view("home/classify", compact('classifies', 'books'));
+        $select=0;
+
+        return  view("home/classify", compact('classifies', 'books','select'));
     }
 
     //作者详情
@@ -237,6 +239,41 @@ class BookController extends Controller
         $chapter_name_prev = Chapter::where('book_id', $book->id)->where('chapter_id', $chapter-1)->get()[0]->chapter_name;
 
         return view('/home/read', compact('chapters', 'directory', 'contents', 'chapter_name_next', 'chapter_name_prev'));
+    }
+
+    //热门（点赞排行）
+    public function popular()
+    {
+
+        $classifies = Classify::get();
+
+       $books=Book::withCount('book_goods')->get()->sortByDesc('book_goods_count')->take(10);
+
+       $select=1;
+
+        return  view("home/classify", compact('classifies', 'books','select'));
+    }
+
+    //推荐（新书推荐）
+    public function recommend(){
+        $classifies = Classify::get();
+
+        $books=Book::orderBy('updated_at','des')->take(10)->get();
+
+        $select=2;
+
+        return  view("home/classify", compact('classifies', 'books','select'));
+    }
+    //排行（收藏排行）
+    public function ranking(){
+
+        $classifies = Classify::get();
+
+        $books=Book::withCount('collects')->get()->sortByDesc('collects_count')->take(10);
+
+        $select=3;
+
+        return  view("home/classify", compact('classifies', 'books','select'));
     }
 
 }
