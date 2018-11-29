@@ -17,6 +17,9 @@ class BookController extends Controller
     //加载后台主页
     public function index()
     {
+        if (!\Auth::guard("admin")->check()) {
+            return redirect("/admin/login");
+        }
         return view("admin/index");
     }
 

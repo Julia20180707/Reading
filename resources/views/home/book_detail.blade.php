@@ -31,14 +31,14 @@
         <div class="row book_info clearfix">
             <div class="row book_info_top">
                 <div class="col-xs-3 icon">
-                    <a href="/author/{{$book->author->id}}">
-                        <img src="/{{$book->cover_pic}}" />
-                    </a>
+                    <img src="/{{$book->cover_pic}}" />
                 </div>
                 <div class="col-xs-9 info">
                     <div class="information fl ">
                         <h2><span class="user_tag">随笔</span>{{$book->title}}</h2>
-                        <h4>作者：{{$book->author->name}}</h4>
+                        <a href="/author/{{$book->author->id}}">
+                            <h4>作者：{{$book->author->name}}</h4>
+                        </a>
                         <p>{{$book->created_at}}</p>
                         <span>254682人看过</span>
                     </div>
@@ -77,20 +77,6 @@
             </div>
         </div>
         {{--介绍--}}
-
-
-        {{--目录--}}
-        <div class="row catalog peo">
-            <h3>目录</h3>
-            <div class="list">
-                <p>1·深夜食堂</p>
-                <p>2·深夜食堂</p>
-                <p>3·深夜食堂</p>
-                <p>4·深夜食堂</p>
-                <p>5·深夜食堂</p>
-            </div>
-        </div>
-        {{--目录--}}
 
 
 

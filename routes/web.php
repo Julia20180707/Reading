@@ -27,6 +27,7 @@ Route::prefix("/")->namespace("Home")->group(function () {
     //用户登录
     Route::get("login", "LoginController@index");//加载登录页面
     Route::post("login", "LoginController@login");//执行登录
+//    Route::post("dologin/{val}", "LoginController@dologin");//执行登录
     Route::get("logout", "LoginController@logout");//执行退出
 
     Route::get("index", "BookController@index");//首页
@@ -79,6 +80,7 @@ Route::prefix("admin")->namespace("Admin")->group(function () {
     /*用户登录*/
     Route::get("login", "UserController@login");
     Route::post("dologin", "UserController@dologin");
+    Route::get("logout", "UserController@logout");
 
 
     /* 后台首页开始 */

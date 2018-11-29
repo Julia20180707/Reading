@@ -181,7 +181,7 @@
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="/admin/login">Logout</a></li>
+                <li><a class="logout" href="/admin/logout">Logout</a></li>
             </ul>
         </div>
     </header>
@@ -222,10 +222,10 @@
                 <li class="sub-menu">
                     <a href="javascript:;" >
                         <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
+                        <span>用户</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="/admin/general">General</a></li>
+                        <li><a  href="/admin/general">用户列表</a></li>
                         <li><a  href="/admin/buttons">Buttons</a></li>
                         <li><a  href="/admin/panels">Panels</a></li>
                     </ul>

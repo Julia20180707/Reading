@@ -3,6 +3,7 @@
 
 {{--替换顶部内容--}}
 {{--替换顶部内容--}}
+@section('title_left', 'glyphicon glyphicon-menu-left')
 @section('title', '热门作者')
 @section('title_right', 'glyphicon glyphicon-share')
 
@@ -58,7 +59,7 @@
                             <p class="star"><a><img src="/home/images/star_2.jpg"></a></p>
                         @endif
                     @else
-                        <p class="star"><a href="/add_like_book/{{$book->id}}"><img src="/home/images/star_1.jpg"></a></p>
+                        <p class="star"><a href="/login"><img src="/home/images/star_1.jpg"></a></p>
                     @endif
                     <p class="desc">{{$book->description}}</p>
                 </div>

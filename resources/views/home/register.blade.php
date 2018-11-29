@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reading</title>
+    <script src="/home/js/jquery.min.js"></script>
     <script src="/home/js/responsive.js"></script>
     <link rel="stylesheet" href="/home/css/bootstrap.min.css">
     <link rel="stylesheet" href="/home/css/reset.css">
     <link rel="stylesheet" href="/home/css/register.css">
     <link rel="stylesheet" href="/home/css/header.css">
-    <link rel="stylesheet" href="/css/error.css">
     <script src="/js/responsive.js"></script>
+    <script>
+        $(function () {
+            $('#back').click(function () {
+                history.back(-1);
+            })
+        })
+
+    </script>
 </head>
 <body>
 <!-- 头部开始 -->
 <header>
     <div class="container">
-        <div class="col-xs-4 addr"><a href="/mine"><i class="glyphicon glyphicon-menu-left"></i></a></div>
+        <div class="col-xs-4 addr"><a id="back"><i class="glyphicon glyphicon-menu-left"></i></a></div>
         <div class="col-xs-4 title">用户注册</div>
         <div class="col-xs-4 search"></div>
     </div>
 </header>
+<div class="header"></div>
 <!-- 头部结束 -->
 <div class="container login_box bg">
     <div class="row ">
