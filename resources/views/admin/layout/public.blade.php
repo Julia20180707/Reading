@@ -214,6 +214,7 @@
                     <ul class="sub">
                         <li><a  href="/admin/classify">分类管理</a></li>
                         <li><a  href="/admin/upload">上传新书</a></li>
+                        <li><a  href="/admin/upload_chapter">上传章节</a></li>
                         <li><a  href="/admin/books_manage">书籍管理</a></li>
                     </ul>
                 </li>

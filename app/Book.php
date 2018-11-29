@@ -16,18 +16,25 @@ class Book extends Model
         return $this->hasMany('App\Book_good', 'book_id', 'id');
     }
 
+    //与分类表关联
+    public function classifies()
+    {
+        //建立一对多的正向关联
+        return $this->hasOne('App\Classify', 'id', 'class_id');
+    }
+
+    //与收藏表关联
+    public function all_collects()
+    {
+        //建立一对多的正向关联
+        return $this->hasMany('App\Collect', 'book_id', 'id');
+    }
+
     //建立与作者的关联
     public function author()
     {
         //建立（一对多）的反向关联用户表
         return $this->belongsTo('\App\Author','author_id','id');
-    }
-
-    //建立与用户表中的作者的关联
-    public function u_author()
-    {
-        //建立（一对多）的反向关联用户表
-        return $this->belongsTo('\App\User','author_id','id');
     }
 
     //建立与赞的关联

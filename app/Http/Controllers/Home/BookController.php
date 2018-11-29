@@ -18,10 +18,17 @@ class BookController extends Controller
     //首页
     public function index()
     {
-        $books = Book::withCount('book_goods')->get()->sortByDesc('book_goods_count')->take(5);
-
-        $all_books = Book::get();
-        return view("home/index", compact('books', 'all_books'));
+        //附近热门
+        $hot_books = Book::withCount('book_goods')->get()->sortByDesc('book_goods_count')->take(5);
+        //高分榜
+        $score_books = Book::withCount('book_goods')->get()->sortByDesc('book_goods_count')->take(3);
+        //灯幕热门(暂放数据库books表中前十本)
+        $all_books = Book::take(10)->get();
+        //新书榜
+        $new_books = Book::orderBy('created_at', 'desc')->take(3)->get();
+        //总榜(暂按收藏排行)
+        $good_books = Book::withCount('all_collects')->get()->sortByDesc('all_collects_count')->take(3);
+        return view("home/index", compact('hot_books', 'all_books', 'score_books', 'new_books', 'good_books'));
     }
 
     //作者信息
@@ -53,8 +60,9 @@ class BookController extends Controller
     {
         return view('/home/author');
     }
-    public function book_detail($id){
 
+    public function book_detail($id)
+    {
         //查询当前书籍信息
         $book=Book::where('id',$id)->withCount('zans','comments')->get()[0];
 
@@ -67,13 +75,11 @@ class BookController extends Controller
 
     public function zan($id)
     {
-
         //获取帖子id和用户id
         $data=[
             'book_id'=>$id,
             'user_id'=>\Auth::id(),
         ];
-
 
         //存储到模型中(firstOrCreate:代表数据表中没有就添加，有就查询)
         Book_good::firstOrCreate($data);
@@ -138,7 +144,6 @@ class BookController extends Controller
         return back();
     }
 
-
     public function un_like_book($id)
     {
         $book = Book::find($id);
@@ -162,7 +167,6 @@ class BookController extends Controller
 
         return back();
     }
-
 
     //查看用户书架
     public function bookcase()
@@ -205,18 +209,18 @@ class BookController extends Controller
         $contents = iconv($encoding, 'UTF-8', $contents);
         $contents = str_replace("\r\n","\n",$contents);
 
-        $chapters = Chapter::where("book_id", $book->id)->get();
+        $chapters = Chapter::where("book_id", $book->id)->orderBy('chapter_id')->get();
 
         //当前章节号
         $chapter = Chapter::where(['book_id' => $book->id, 'chapter_name' => $chapter_name])->get()[0]->chapter_id;
 
-        if (!count(Chapter::where('chapter_id', $chapter-1)->get())) {
+        if (!count(Chapter::where(['book_id' => $book->id, 'chapter_id' => $chapter-1])->get())) {
             //若没有上一章  则只传出下一章chapter_name
             $chapter_name_next = Chapter::where('book_id', $book->id)->where('chapter_id', $chapter+1)->get()[0]->chapter_name;
             return view('/home/read', compact('chapters', 'directory', 'contents', 'chapter_name_next'));
         }
 
-        if (!count(Chapter::where('chapter_id', $chapter+1)->get())) {
+        if (!count(Chapter::where(['book_id' => $book->id, 'chapter_id' => $chapter+1])->get())) {
             //若没有下一章  则只传出上一章chapter_name
             $chapter_name_prev = Chapter::where('book_id', $book->id)->where('chapter_id', $chapter-1)->get()[0]->chapter_name;
             return view('/home/read', compact('chapters', 'directory', 'contents', 'chapter_name_prev'));

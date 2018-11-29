@@ -86,15 +86,20 @@ Route::prefix("admin")->namespace("Admin")->group(function () {
     /* 后台首页结束 */
 
     /* 分类管理模块开始 */
-    Route::get("classify", "BookController@classify");
-    Route::get("classify_delete/{id}", "BookController@classify_delete");
-    Route::post("classify_add", "BookController@classify_add");
-    Route::get("classify_edit/{id}", "BookController@classify_edit");
-    Route::post("classify_save", "BookController@classify_save");
+    Route::get("classify", "BookController@classify");  //加载分类页面
+    Route::get("classify_delete/{id}", "BookController@classify_delete");   //删除某分类
+    Route::post("classify_add", "BookController@classify_add");     //添加分类
+    Route::get("classify_edit/{id}", "BookController@classify_edit");   //编辑分类
+    Route::post("classify_save", "BookController@classify_save");   //保存修改后的分类
     /* 分类管理模块结束 */
 
     /* 书籍管理模块开始 */
-    Route::get("upload", "BookController@upload");
-    Route::post("books_upload", "BookController@books_upload");
+    Route::get("upload", "BookController@upload");      //加载上传书籍页面
+    Route::post("books_upload", "BookController@books_upload");     //执行书籍上传
+    Route::get("books_manage", "BookController@books_manage");     //加载书籍管理页面
+    Route::get("book_edit/{id}", "BookController@book_edit");     //加载修改书籍信息页面
+    Route::post("book_save", "BookController@book_save");     //保存书籍信息修改
+    Route::get("upload_chapter", "BookController@upload_chapter");     //加载上传章节页面
+    Route::post("chapter_save", "BookController@chapter_save");     //执行章节上传
     /* 书籍管理模块结束 */
 });

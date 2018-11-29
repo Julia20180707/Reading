@@ -16,12 +16,12 @@
             <p class="fr"><span class="fl">32</span><img src="/home/images/menu.png" class="fl"></p>
         </div>
         <div class="hot_item_wrap clearfix">
-            @foreach($books as $book)
+            @foreach($hot_books as $book)
             <a class="hot_item fl" href="/book_detail/{{$book->id}}">
                 <img src="/{{$book->cover_pic}}" alt="" class="fl">
                 <div class="fr describe">
                     <p class="title">{{$book->title}}</p>
-                    <p class="author">作者：{{$book->u_author->name}}</p>
+                    <p class="author">作者：{{$book->author->name}}</p>
                     <p class="comment">这个世界的规则有时候是不可思议的。被伤害的人被责怪，加害者却高枕无忧。</p>
                     <p class="c_user fr">—毛菇菇评</p>
                 </div>
@@ -42,59 +42,41 @@
         <div class="row">
             <div class="col-xs-4 class_item">
                 <h4>总榜</h4>
-                <div class="rec_item">
-                    <img src="/home/images/1_10.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_19.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_25.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
+                @foreach($good_books as $book)
+                    <a href="/book_detail/{{$book->id}}" style="color: #686058;">
+                        <div class="rec_item">
+                            <img src="/{{$book->cover_pic}}" />
+                            <p class="title">{{$book->title}}</p>
+                            <p class="author">作者:{{$book->author->name}}</p>
+                        </div>
+                    </a>
+                @endforeach
                 <img src="/home/images/menu.png" class="menu" />
             </div>
             <div class="col-xs-4 class_item">
                 <h4>高分榜</h4>
-                <div class="rec_item">
-                    <img src="/home/images/1_12.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_20.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_26.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
+                @foreach($score_books as $book)
+                    <a href="/book_detail/{{$book->id}}" style="color: #686058;">
+                        <div class="rec_item">
+                            <img src="/{{$book->cover_pic}}" />
+                            <p class="title">{{$book->title}}</p>
+                            <p class="author">作者:{{$book->author->name}}</p>
+                        </div>
+                    </a>
+                @endforeach
                 <img src="/home/images/menu.png" class="menu" />
             </div>
             <div class="col-xs-4 class_item">
                 <h4>新书榜</h4>
-                <div class="rec_item">
-                    <img src="/home/images/1_14.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_21.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
-                <div class="rec_item">
-                    <img src="/home/images/1_27.png" />
-                    <p class="title">杀死一只知更鸟</p>
-                    <p class="author">[美]哈珀·李</p>
-                </div>
+                @foreach($new_books as $book)
+                    <a href="/book_detail/{{$book->id}}" style="color: #686058;">
+                        <div class="rec_item">
+                            <img src="/{{$book->cover_pic}}" />
+                            <p class="title">{{$book->title}}</p>
+                            <p class="author">作者:{{$book->author->name}}</p>
+                        </div>
+                    </a>
+                @endforeach
                 <img src="/home/images/menu.png" class="menu" />
             </div>
         </div>
@@ -105,7 +87,7 @@
     <div class="container hot_author">
         <h2>热门作者</h2>
         <div class="clearfix author_info">
-            <a href="/author_detail">
+            <a href="/author_detail" style="color: #686058;">
                 <div class="col-xs-3 col-sm-4 col-md-4">
                     <img src="/home/images/author1.png" />
                 </div>
@@ -127,14 +109,14 @@
     <div class="container hot_reading">
         <h2>灯幕热门</h2>
         @foreach($all_books as $book)
-            <a href="/book_detail/{{$book->id}}">
+            <a href="/book_detail/{{$book->id}}" style="color: #686058;">
                 <div class="clearfix reading_info">
                     <div class="col-xs-3 cover">
                         <img src="/{{$book->cover_pic}}">
                     </div>
                     <div class="col-xs-9">
                         <p class="title">{{$book->title}}</p>
-                        <p class="author">作者：<span>{{$book->u_author->name}}</span></p>
+                        <p class="author">作者：<span>{{$book->author->name}}</span></p>
                         <p class="hot_info">253254人在读</p>
                         <p class="desc">{{$book->description}}</p>
                     </div>

@@ -19,7 +19,7 @@
             background-color: #faecde;
         }
         .catalog {
-            height: 100vh;
+            height: 95vh;
             overflow-y: scroll;
         }
         #pull {
